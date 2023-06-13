@@ -1,4 +1,5 @@
 <?php 
+	// Important Notes: final Keyword – Used to avoid inheritance and overriding.
 	class Father{
 		public $home;
 		protected $car;
@@ -18,6 +19,11 @@
 			$this->money = "$10B";
 			return "Now, my bank balance is ". $this->money;
 		}
+
+		// Important Notes: final Keyword – Used to avoid inheritance and overriding.
+		// final public function username(){
+		// 	return "Rohim Ullah";
+		// }
 	}
 
 	class Son extends Father{
@@ -37,6 +43,11 @@
 			// Private method is not accessible in child class inside. Showing errors.
 			return $this->bank_balance(). ' for Son after my death.';
 		}
+
+		// final keyword is used. So, it is not overridable. Showing errors.
+		// public function username(){
+		// 	return "Korim Ullah";
+		// }
 	}
 
 	$obj = new Father();
@@ -78,4 +89,3 @@
 	// echo "<br>";
 	
 	// echo $obj2->bank_balance(); // Private method is not accessible in child class outside. Showing errors.
-
