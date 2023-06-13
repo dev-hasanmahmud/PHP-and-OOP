@@ -26,16 +26,16 @@
 		}
 
 		public function my_father_cute_home(){
-			return parent::cute_home(). ' for Son after my death.';
+			return $this->cute_home(). ' for Son after my death.';
 		}
 
 		public function my_father_awsome_car(){
-			return parent::awsome_car(). ' for Son after my death.';
+			return $this->awsome_car(). ' for Son after my death.';
 		}
 
 		public function my_father_bank_balance(){
 			// Private method is not accessible in child class inside. Showing errors.
-			return parent::bank_balance(). ' for Son after my death.';
+			return $this->bank_balance(). ' for Son after my death.';
 		}
 	}
 
